@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroEco Hub | Futuro Sustentável</title>
+    
+    <!-- Google Fonts (Corrigido) -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    
+    <!-- Font Awesome para ícones (Corrigido) -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    
+    <style>
+        :root {
+            --verde-floresta: #1B4332;
+            --verde-lima: #74C69D;
+            --cinza-tech: #495057;
+            --branco-gelo: #F8F9FA;
+            --preto-suave: #212529;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--branco-gelo);
+            color: var(--preto-suave);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+
+        /* Header */
+        header {
+            background-color: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            color: var(--verde-floresta);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo i {
+            color: var(--verde-lima);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--cinza-tech);
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--verde-lima);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 80vh;
+            background: linear-gradient(rgba(27, 67, 50, 0.7), rgba(27, 67, 50, 0.7)), url('https://unsplash.com');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+            margin-top: 60px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin-bottom: 30px;
+        }
+
+        .btn-principal {
+            background-color: var(--verde-lima);
+            color: var(--verde-floresta);
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: 0.3s;
+        }
+
+        .btn-principal:hover {
+            background-color: white;
+            transform: scale(1.05);
+        }
+
+        /* Categorias do Marketplace (Fechado e Ajustado) */
+        .categorias {
+            padding: 80px 5%;
+            text-align: center;
+        }
+
+        .categorias h2 {
+            color: var(--verde-floresta);
+            margin-bottom: 40px;
+            font-size: 2rem;
+        }
+
+        .grid-categorias {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .card-categoria {
+            background: white;
+            padding: 40px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+
+        .card-categoria:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-categoria i {
+            font-size: 3rem;
+            color: var(--verde-lima);
+            margin-bottom: 20px;
+        }
+
+        .card-categoria h3 {
+            margin-bottom: 15px;
+            color: var(--verde-floresta);
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: var(--verde-floresta);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Topo da página -->
+    <header>
+        <a href="#" class="logo">
+            <i class="fa-solid fa-seedling"></i> AgroEco Hub
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#categorias">Categorias</a></li>
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção Principal -->
+    <section class="hero">
+        <h1>Conectando a Tecnologia com o Campo</h1>
+        <p>Soluções inovadoras para o mercado agrícola sustentável. Encontre insumos biológicos, equipamentos ecoeficientes e consultoria especializada.</p>
+        <a href="#categorias" class="btn-principal">Explorar Soluções</a>
+    </section>
+
+    <!-- Seção de Categorias -->
+    <section id="categorias" class="categorias">
+        <h2>Nossas Categorias</h2>
+        <div class="grid-categorias">
+            <div class="card-categoria">
+                <i class="fa-solid fa-leaf"></i>
+                <h3>Insumos Orgânicos</h3>
+                <p>Fertilizantes e defensivos naturais para proteger sua lavoura com segurança.</p>
+            </div>
+            <div class="card-categoria">
+                <i class="fa-solid fa-tractor"></i>
+                <h3>Eco Equipamentos</h3>
+                <p>Maquinário de baixo impacto ambiental e máxima eficiência energética.</p>
+            </div>
+            <div class="card-categoria">
+                <i class="fa-solid fa-chart-line"></i>
+                <h3>Gestão Inteligente</h3>
+                <p>Softwares e monitoramento via satélite para otimizar sua produção.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2026 AgroEco Hub. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
